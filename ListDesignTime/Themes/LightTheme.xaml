@@ -5,7 +5,7 @@
 
     <Color x:Key="MainColor">White</Color>
     <Color x:Key="SecondaryColor">Black</Color>
-    <Color x:Key="ThirdColor">LightGray</Color>
+    <Color x:Key="ThirdColor">DarkGray</Color>
     <Color x:Key="NavigationPrimaryColor">LightGray</Color>
     <Color x:Key="NavigationTintColor">Black</Color>
     <Color x:Key="RefreshControlColor">Black</Color>

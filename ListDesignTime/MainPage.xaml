@@ -19,7 +19,8 @@
                   RefreshControlColor="{ DynamicResource RefreshControlColor }"
                   IsRefreshing="{ Binding IsRefreshing }"
                   RefreshCommand="{ Binding RefreshCommand }"
-                  CachingStrategy="RecycleElement">
+                  CachingStrategy="RecycleElement"
+                  ItemTemplate="{ StaticResource MyTemplate }">
 
             <d:ListView.ItemsSource>
                 <x:Array Type="{ x:Type x:String }">
@@ -31,28 +32,8 @@
                     <x:String>Sixth item</x:String>
                 </x:Array>
             </d:ListView.ItemsSource>
-
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell> 
-                        <StackLayout Padding="10" BackgroundColor="{ DynamicResource MainColor }">
-                            <Label Text="{ Binding Text }"
-                                   d:Text="{ Binding . }"
-                                   FontAttributes="Bold"
-                                   FontSize="{ OnPlatform Android=17,iOS=16 }"
-                                   LineBreakMode="NoWrap"
-                                   TextColor="{ DynamicResource SecondaryColor }" />
-                            <Label Text="{ Binding Description }"
-                                   d:Text="Description"
-                                   FontSize="13"
-                                   LineBreakMode="NoWrap"
-                                   TextColor="{ DynamicResource ThirdColor }" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-
         </ListView>
+
         <Button Text="Load Data" Command="{ Binding LoadDataCommand }"/>
         <Button Text="Send Parameters" Command="{ Binding ParametersCommand }" CommandParameter="This is a Command" />
         <Button Text="Change Color" Command="{ Binding ChangeColorCommand }"/>

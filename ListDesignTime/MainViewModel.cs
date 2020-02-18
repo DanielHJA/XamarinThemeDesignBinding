@@ -34,7 +34,7 @@ namespace ListDesignTime
             set
             {
                 _isRefreshing = value;
-                OnPropertyChanged(nameof(IsRefreshing));
+                OnPropertyChanged();
             }
         }
 

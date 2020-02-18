@@ -8,5 +8,23 @@
             <Setter Property="BarTextColor" Value="{DynamicResource NavigationTintColor }"/>
         </Style>
 
+        <DataTemplate x:Key="MyTemplate">
+            <ViewCell>
+                <StackLayout Padding="10" BackgroundColor="{ DynamicResource MainColor }">
+                    <Label Text="{ Binding Text }"
+                                   d:Text="{ Binding . }"
+                                   FontAttributes="Bold"
+                                   FontSize="{ OnPlatform Android=17,iOS=16 }"
+                                   LineBreakMode="NoWrap"
+                                   TextColor="{ DynamicResource SecondaryColor }" />
+                    <Label Text="{ Binding Description }"
+                                   d:Text="Description"
+                                   FontSize="13"
+                                   LineBreakMode="NoWrap"
+                                   TextColor="{ DynamicResource ThirdColor }" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+
     </Application.Resources>
 </Application>
